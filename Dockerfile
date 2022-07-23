@@ -1,4 +1,5 @@
 FROM node:lts-alpine
+RUN apk add  --no-cache ffmpeg
 
 ARG BUILD_DATE
 ARG VCS_REF
@@ -13,7 +14,7 @@ LABEL org.label-schema.build-date="${BUILD_DATE}" \
       org.label-schema.version="2.3.3" \
       maintainer="https://github.com/illuspas"
 
-WORKDIR /usr/src/app
+WORKDIR /nodestream
 
 COPY package*.json ./
 

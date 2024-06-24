@@ -11,7 +11,7 @@ let argv = require('minimist')(process.argv.slice(2),
     },
     default:{
       'rtmp_port': 1935,
-      'http_port': 8000,
+      'http_port': 80,
       'https_port': 8443,
     }
   });
@@ -20,7 +20,7 @@ if (argv.help) {
   console.log('Usage:');
   console.log('  node-media-server --help // print help information');
   console.log('  node-media-server --rtmp_port 1935 or -r 1935');
-  console.log('  node-media-server --http_port 8000 or -h 8000');
+  console.log('  node-media-server --http_port 8000 or -h 80');
   console.log('  node-media-server --https_port 8443 or -s 8443');
   process.exit(0);
 }
@@ -34,7 +34,7 @@ const config = {
     ping_timeout: 60
   },
   http: {
-    port: 8000,
+    port: 80,
     mediaroot: './media',
     allow_origin: '*'
   },

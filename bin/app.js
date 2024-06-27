@@ -40,7 +40,7 @@ const config = {
   },
   trans: {
     // ffmpeg: '/usr/local/bin/ffmpeg',
-    ffmpeg: '/usr/bin/ffmpeg',
+    ffmpeg: '/opt/homebrew/bin/ffmpeg',
     tasks: [
       {
         app: 'live',
